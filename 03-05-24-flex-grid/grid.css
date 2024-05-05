@@ -1,0 +1,55 @@
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 200px);
+    grid-template-rows: repeat(3, 200px);
+    grid-template-areas:
+        "cuatro tres cinco"
+        "dos uno seis"
+        "nueve ocho siete";
+    gap: 50px;
+}
+
+.item {
+    font-size: 50px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: gray;
+}
+
+.item1 {
+    grid-area: uno;
+}
+
+.item2 {
+    grid-area: dos;
+}
+
+.item3 {
+    grid-area: tres;
+}
+
+.item4 {
+    grid-area: cuatro;
+}
+
+.item5 {
+    grid-area: cinco;
+}
+
+.item6 {
+    grid-area: seis;
+}
+
+.item7 {
+    grid-area: siete;
+}
+
+.item8 {
+    grid-area: ocho;
+}
+
+.item9 {
+    grid-area: nueve;
+}

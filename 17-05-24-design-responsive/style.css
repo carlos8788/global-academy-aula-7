@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Karla", sans-serif;
+}
+
+
+/*****************************/
+/*********  MOBILE  **********/
+/*****************************/
+
+body{
+    background-color: hsl(148, 38%, 91%);
+    padding: 0 20px;
+}
+
+.formulario{
+    background-color: hsl(0, 0%, 100%);
+    margin: 20px auto;
+    padding: 15px;
+    color: hsl(187, 24%, 22%);
+    border-radius: 20px;
+    max-width: 600px;
+}
+
+h1{
+    margin-bottom: 10px;
+}
+
+.primeros-datos{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.green {
+    color: hsl(169, 82%, 27%);
+}
+
+.primeros-datos>input{
+    margin-bottom: 10px;
+    padding: 8px;
+    border-radius: 8px;
+    border: solid 0.5px hsl(186, 15%, 59%);
+    
+}
+.labels {
+    font-size: 12px;
+}
+
+.query-types{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.radios{
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 10px;
+    justify-content: flex-end;
+    border: solid 0.5px hsl(186, 15%, 59%);
+    padding: 8px;
+    padding-left: 20px;
+    border-radius: 8px;
+}
+.radios>input{
+    border: none;
+}
+
+.message{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: flex-start; */
+    align-items: self-start;
+    margin-top: 20px;
+}
+.title-message{
+    margin: 10px 0;
+}
+
+.message>textarea{
+    width: 100%;
+    height: 200px;
+    border-radius: 8px;
+    border: solid 0.5px hsl(186, 15%, 59%);
+    margin-bottom: 20px;
+    resize: none;
+}
+
+.consent{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+
+}
+
+#consent-label{
+    font-size: 16px;
+}
+
+.message>button{
+    margin: 20px auto;
+    border: none;
+    padding: 15px 25px;
+    background-color: hsl(169, 82%, 27%);
+    color: hsl(0, 0%, 100%);
+    border-radius: 8px;
+    width: 100%;
+    font-size: 16px;
+    font-weight: bolder;
+    transition: background-color 0.4s ease-in-out;
+}
+
+.message>button:hover{
+    background-color: hsl(147, 28%, 50%);
+}
+
+.message>button:active{
+    background-color: hsl(139, 66%, 30%);
+}
+
+.formulario>h1::after{
+    content: " ⬇️";
+}
+
+.conditions::selection{
+    background-color: black;
+    color: white;
+}
+
+/******************************/
+/*********  DESKTOP  **********/
+/******************************/
+
+@media (width>900px){
+    body{
+        padding: 0;
+        /* background-color: red; */
+    }
+    .primeros-datos{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+        "label-1 label-2"
+        "input-1 input-2"
+        "label-3 label-3"
+        "input-3 input-3";
+        gap: 20px;
+    }
+
+    .primeros-datos>input[type="text"]{
+        
+        font-size: 20px;
+    }
+
+    .labels{
+        font-size: 20px;
+    }
+    .primeros-datos>.labels {
+        max-width: 200px;
+    }
+    .label-1{
+        align-self: self-end;
+        grid-area: label-1;
+    }
+    .label-2{
+        align-self: self-end;
+        grid-area: label-2;
+    }
+
+    .input-1{
+        grid-area: input-1;
+    }
+
+    .input-2{
+        grid-area: input-2;
+    }
+
+    .label-3{
+        align-self: self-end;
+        grid-area: label-3;
+    }
+    .input-3{
+        grid-area: input-3;
+    }
+
+    .query-types{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+        "label label"
+        "check-1 check-2";
+    }
+    .query-types>:first-child{
+        grid-area: label;
+    }
+    .message{
+        height: 300px;
+    }
+}

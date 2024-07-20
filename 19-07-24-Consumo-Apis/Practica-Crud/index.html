@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>CRUD Mock - Consumo de Apis</title>
+
+</head>
+<body>
+
+    <h1>Crud de productos con fetch</h1>
+
+    <form action="">
+        <!-- con hidden oculto el input, el id nunca lo generamos,
+          lo hace automatico la api  -->          
+        <input type="hidden" class="producto-id">
+
+        <!-- los name de los inputs tienen que estar tal cual las variables de la api -->
+        <input class="inputNombre" type="text" name="name" placeholder="Nombre del producto">
+        <input class="inputPecio" type="number" name="precio" placeholder="Precio del producto">
+        <input class="inputDescripcion" type="text" name="descripcion" placeholder="Descripcion">
+        <input class="inputAvatar" type="url" name="avatar" placeholder="Image del producto">
+
+        <button type="submit">Guardar</button>
+
+    </form>
+
+    <h2>Listado de Productos</h2>
+    
+    <div class="container">
+
+        <!-- renderizar los datos del mock -->
+
+    </div>
+
+</body>
+
+    <script src="main.js"></script>
+</html>

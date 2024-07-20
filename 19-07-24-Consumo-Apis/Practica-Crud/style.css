@@ -1,0 +1,24 @@
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 300px;
+}
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+/* Esta calse viene del renderizado de js*/
+.product-card{
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 200px;
+
+}
+
+.product-card img{
+    max-width: 100%;
+    height: auto;
+}

@@ -1,7 +1,7 @@
 import { actualizarData, crearData, eliminarData, getData, getDataById } from "./api.js";
 import { pintarCard } from "./pintarCard.js";
 
-const URL = "https://66631a8c62966e20ef0b668a.mockapi.io/Productos";
+const URL = "Url de su api";
 //1)METODO GET
 function cargaProductos(){
 

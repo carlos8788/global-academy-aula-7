@@ -1,5 +1,5 @@
 //1)Url del mock api que egeneramos en la clase teorica
-const URL = "https://66631a8c62966e20ef0b668a.mockapi.io/Productos";
+const URL = "URl de su api";
 
 export async function getData(URL){
 

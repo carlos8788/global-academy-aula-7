@@ -1,0 +1,29 @@
+Requerimientos a cumplir:
+
+    - FECHA DE ENTREGA => HASTA EL 19/08/24
+    - Desarrollar un Sitio Web del tema que elijan
+
+    PARA APROBAR DEBE CUMPLIR:
+    - Debe ser Responsivo en Descktop(PC) y Celular(movil)
+    - Los archivos HTML pueden ser la cantidad que deseen, pero el Home debe ser index.html
+    - Datos estructurales (array - objetos) y sus métodos
+    - Funciones personalizadas 
+    - Funciones de orden superior (ejemplo: filter, map, forEach), debe contar con un metodo de busqueda.
+    - Estructuras de Control ( ciclos )
+    - Manipulación del DOM y Eventos ( crear el HTML desde js - dinamismo )
+    - Consumos de APIs  (cualquiera, la que elijan, propia o de terceros )
+    - Uso de Módulos ( separacion de logica en archivos y estructura de carpetas, osea separacion de archivos)
+    - CDN’s, librerías (ejemplo sweetalert2)
+
+    Opcional:
+    - Local Storage
+    - Operador ternario
+    - Destructuring
+    - Spead Operator
+
+
+* Atencion: Si se guian de videos o Chat GPT para realizar el proyecto, y por lo tanto
+            aplican temas que no usamos en clases sera valido, si saben defender 
+            lo que aplicaron, explicando funcionalidad.
+
+            

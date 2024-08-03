@@ -1,12 +1,16 @@
 
 import { actualizarData, crearData, eliminarData, getData, getDataById } from "./api.js";
 import { pintarCard } from "./pintarCard.js";
+import { mensajeDeCarga } from "./spiner.js";
 
 const URL = "https://66631a8c62966e20ef0b668a.mockapi.io/Productos";
 
 //1)METODO GET
 function cargaProductos(){
 //////////////////////////////////////////////////////////
+//funcion que aplica operador ternario
+    let cargando = true;
+    mensajeDeCarga(cargando)
 
     //agrego un delay para ver el spiner
     setTimeout(() => {
@@ -46,6 +50,14 @@ function cargaProductos(){
     })
     .catch(err => {
         console.log(err)
+
+        Swal.fire({
+            position: "center",
+            icon: "error",
+            title: "Error al traer los datos",
+            showConfirmButton: false,
+            timer: 1500
+        })
     })
 
     }, 1000)
@@ -72,10 +84,14 @@ function guardarProductos(){
 
         //si hay un id lo actualizo PUT, 
         //si no es que es un nuevo producto y lo crea POST
+        
+ //Aqui para aplicar deberia ser asi idProducto ? actualizarProductos() : crearProductos()
         if(idProducto){
 
             console.log("Si hay id actualizo, PUT")
-            actualizarData(URL, idProducto, data)
+
+            //spead operator
+            actualizarData(URL, idProducto, {...data})
             .then(() =>{
                 //una vez actualizado volvemos a cargar los datos
                 cargaProductos()
@@ -92,6 +108,14 @@ function guardarProductos(){
             })
             .catch(err => {
                 console.log(err)
+
+                Swal.fire({
+                    position: "center",
+                    icon: "error",
+                    title: "Error al actualizar el producto",
+                    showConfirmButton: false,
+                    timer: 1500
+                })
             })
 
 
@@ -115,6 +139,14 @@ function guardarProductos(){
             })
             .catch(err => {
                 console.log(err)
+
+                Swal.fire({
+                    position: "center",
+                    icon: "error",
+                    title: "Error al crear el producto",
+                    showConfirmButton: false,
+                    timer: 1500
+                })
             })
         }
 
@@ -132,16 +164,24 @@ function editarProducto(URL, id){
     //el id no lo actualizo pero lo necesito para el PUT
     .then(data => {
         //////////////////////////////////////////////////
+        const {name, precio,descripcion,avatar,id} = data
 
-        document.querySelector(".inputNombre").value = data.name
-        document.querySelector(".inputPecio").value = data.precio
-        document.querySelector(".inputDescripcion").value = data.descripcion
-        document.querySelector(".inputAvatar").value = data.avatar
-        document.querySelector(".producto-id").value = data.id
+        document.querySelector(".inputNombre").value = name
+        document.querySelector(".inputPecio").value = precio
+        document.querySelector(".inputDescripcion").value = descripcion
+        document.querySelector(".inputAvatar").value = avatar
+        document.querySelector(".producto-id").value = id
         ///////////////////////////////////////////////////
     })
     .catch(err =>{
         console.log(err)
+        Swal.fire({
+            position: "center",
+            icon: "error",
+            title: "Error al traer el producto",
+            showConfirmButton: false,
+            timer: 1500
+        })
     })
 
 }
@@ -156,6 +196,13 @@ function eliminarProducto(URL, id){
     .then(() => cargaProductos())
     .catch(err =>{
         console.log(err)
+        Swal.fire({
+            position: "center",
+            icon: "error",
+            title: "Error al eliminar el producto",
+            showConfirmButton: false,
+            timer: 1500
+        })
     })
 }
 

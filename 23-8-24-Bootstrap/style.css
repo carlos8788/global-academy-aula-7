@@ -1,0 +1,13 @@
+.accordion{
+    --bs-accordion-btn-bg: red;
+    --bs-accordion-active-bg: violet;
+}
+
+.contenedorNav{
+    background-color: blueviolet;
+}
+
+.containerNav{
+     margin-bottom: 20px;
+}
+
